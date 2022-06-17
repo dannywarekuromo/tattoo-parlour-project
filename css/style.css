@@ -1,0 +1,65 @@
+/*================variables==================*/
+:root {
+    --accent-clr: rgb(240, 170, 41);
+    --dominant-clr: rgb(228, 228, 228);
+    --secondary-clr: rgb(51, 51, 51);
+    --emphasis-ff: ;
+    --regular-ff: ;
+}
+
+/*===============css reset================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*=================global==================*/
+body {
+    background-color: var(--dominant-clr);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+button, a:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*===================header=================*/
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.nav-link {
+    color: var(--secondary-clr);
+}
+
+.ham-panel {
+    display: none;
+}
+
+/*==============hero================*/
+.hero-mp4 {
+    background-image: url();
+}
