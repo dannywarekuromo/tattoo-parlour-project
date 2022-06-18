@@ -1,10 +1,20 @@
 /*================variables==================*/
 :root {
+    /*colors*/
     --accent-clr: rgb(240, 170, 41);
     --dominant-clr: rgb(228, 228, 228);
     --secondary-clr: rgb(51, 51, 51);
-    --emphasis-ff: ;
-    --regular-ff: ;
+    /*font family*/
+    --emphasis-ff: 'Montserrat', sans-serif;
+    --regular-ff: 'EB Garamond', serif; 
+    /*font size*/
+    --hero-fs: 10rem;
+    --h1-fs: 2.25rem;
+    --h2-fs: 1.5rem;
+    --h3-fs: 1.25rem;
+    --normal-fs: 1rem;
+    --small-fs: .875rem;
+    --smaller-fs: .813rem
 }
 
 /*===============css reset================*/
@@ -17,7 +27,7 @@
 /*=================global==================*/
 body {
     background-color: var(--dominant-clr);
-
+    line-height: 1.6;
 }
 
 a {
@@ -29,14 +39,21 @@ button, a:hover {
 }
 
 .container {
+    width: 100%;
+    margin: 0 auto;
+    z-index: var(--z-index);
+}
+
+.section {
     width: 80%;
     margin: 0 auto;
 }
 
 /*===================header=================*/
 header {
-    width: 100%;
+    width: 80%;
     height: 80px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,5 +78,55 @@ li {
 
 /*==============hero================*/
 .hero-mp4 {
-    background-image: url();
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    z-index: -3;
+    object-fit: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background-color: rgba(31, 31, 31, 0.4);
+}
+
+.hero {
+    height: fit-content;
+    color: var(--dominant-clr);
+}
+
+.hero > h1 {
+    font-family: var(--regular-ff);
+    font-size: var(--hero-fs);
+    color: var(--dominant-clr);   
+    line-height: 0.7;
+}
+
+.hero-panel {
+    margin-top: 13rem;
+    font-family: var(--emphasis-ff);
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-cta {
+    background: none;
+    border-color: var(--dominant-clr);
+    border-radius: 50px;
+    padding: .5rem 1.5rem;
+    color: var(--dominant-clr);
+    font-size: var(--h2-fs);
+}
+
+.about {
+    height: ;
+    background-color: var(--dominant-clr);
+
 }
