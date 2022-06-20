@@ -3,10 +3,11 @@
     /*colors*/
     --accent-clr: rgb(240, 170, 41);
     --dominant-clr: rgb(228, 228, 228);
-    --secondary-clr: rgb(51, 51, 51);
+    --secondary-clr: rgb(34, 32, 32);
     /*font family*/
     --emphasis-ff: 'Montserrat', sans-serif;
-    --regular-ff: 'EB Garamond', serif; 
+    --regular-ff: 'Nuosu SIL', serif;
+    --italized-ff: 'EB Garamond', serif; 
     /*font size*/
     --hero-fs: 10rem;
     --h1-fs: 2.25rem;
@@ -27,7 +28,6 @@
 /*=================global==================*/
 body {
     background-color: var(--dominant-clr);
-    line-height: 1.6;
 }
 
 a {
@@ -39,13 +39,13 @@ button, a:hover {
 }
 
 .container {
-    width: 100%;
+    min-width: 100%;
     margin: 0 auto;
     z-index: var(--z-index);
 }
 
 .section {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -57,6 +57,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+logo-panel > a {
+    outline: 0;
 }
 
 .nav-list {
@@ -103,30 +107,66 @@ li {
 }
 
 .hero > h1 {
-    font-family: var(--regular-ff);
     font-size: var(--hero-fs);
-    color: var(--dominant-clr);   
+    color: var(--dominant-clr); 
     line-height: 0.7;
+}
+.hero-heading {
+    font-family: var(--regular-ff);
+    
 }
 
 .hero-panel {
-    margin-top: 13rem;
+    margin-top: 2rem;
+    margin-bottom: 13rem;
     font-family: var(--emphasis-ff);
-    display: flex;
-    justify-content: space-between;
+}
+
+.hero-italized {
+    font-family: var(--italized-ff);
 }
 
 .hero-cta {
     background: none;
     border-color: var(--dominant-clr);
-    border-radius: 50px;
+    border-radius: 100px;
+    margin-top: 2rem;
     padding: .5rem 1.5rem;
     color: var(--dominant-clr);
     font-size: var(--h2-fs);
+    outline: 0
 }
 
+/*=============about================*/
 .about {
-    height: ;
+    width: 100%;
+    min-height: 50vh;
     background-color: var(--dominant-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.about-panel {
+    font-family: var(--emphasis-ff);
+    font-size: var(--h1-fs);
+    color: var(--secondary-clr);
+    line-height: 0.9;
+}
+
+.about-text {
+    font-size: 4.114rem;
+}
+.about-italized {
+    font-family: var(--italized-ff);
+    font-size: 4.9rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+    /*font-style: italic;*/
+}
+
+.about-text-2 {
+    font-family: var(--regular-ff);
+    font-size: 4.32rem;
+    font-weight: 500;
 }
