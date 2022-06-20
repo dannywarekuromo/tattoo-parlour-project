@@ -5,7 +5,7 @@
     --dominant-clr: rgb(228, 228, 228);
     --secondary-clr: rgb(34, 32, 32);
     /*font family*/
-    --emphasis-ff: 'Montserrat', sans-serif;
+    --emphasis-ff: 'Roboto', sans-serif;;
     --regular-ff: 'Nuosu SIL', serif;
     --italized-ff: 'EB Garamond', serif; 
     /*font size*/
@@ -148,25 +148,19 @@ li {
 }
 
 .about-panel {
-    font-family: var(--emphasis-ff);
-    font-size: var(--h1-fs);
+    font-family: var(--regular-ff);
+    /*font-size: var(--h1-fs);*/
     color: var(--secondary-clr);
     line-height: 0.9;
 }
 
 .about-text {
-    font-size: 4.114rem;
+    font-size: 3.5rem;
+    letter-spacing: -2px;
 }
 .about-italized {
     font-family: var(--italized-ff);
-    font-size: 4.9rem;
-    letter-spacing: 4px;
+    font-size: 4.3rem;
+    letter-spacing: 5px;
     font-weight: 600;
-    /*font-style: italic;*/
-}
-
-.about-text-2 {
-    font-family: var(--regular-ff);
-    font-size: 4.32rem;
-    font-weight: 500;
 }
