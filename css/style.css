@@ -2,7 +2,7 @@
 :root {
     /*colors*/
     --accent-clr: rgb(240, 170, 41);
-    --dominant-clr: rgb(228, 228, 228);
+    --dominant-clr: rgb(241, 241, 241);
     --secondary-clr: rgb(34, 32, 32);
     /*font family*/
     --emphasis-ff: 'Roboto', sans-serif;;
@@ -47,6 +47,7 @@ button, a:hover {
 .section {
     max-width: 80%;
     margin: 0 auto;
+    
 }
 
 /*===================header=================*/
@@ -126,14 +127,20 @@ li {
     font-family: var(--italized-ff);
 }
 
+.hero-panel > p {
+    font-size: var(--normal-fs);
+}
+
 .hero-cta {
     background: none;
     border-color: var(--dominant-clr);
     border-radius: 100px;
+    text-align: center;
+    display: inline-block;
     margin-top: 2rem;
     padding: .5rem 1.5rem;
     color: var(--dominant-clr);
-    font-size: var(--h2-fs);
+    font-size: var(--normal-fs);
     outline: 0
 }
 
@@ -154,6 +161,12 @@ li {
     line-height: 0.9;
 }
 
+.svg--item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
 .about-text {
     font-size: 3.5rem;
     letter-spacing: -2px;
@@ -163,4 +176,8 @@ li {
     font-size: 4.3rem;
     letter-spacing: 5px;
     font-weight: 600;
+}
+
+.gallery {
+    background-color: var(--dominant-clr);
 }
