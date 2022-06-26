@@ -9,7 +9,7 @@
     --regular-ff: 'Nuosu SIL', serif;
     --italized-ff: 'EB Garamond', serif; 
     /*font size*/
-    --hero-fs: 4.5rem;
+    --hero-fs: 10rem;
     --h1-fs: 2.25rem;
     --h2-fs: 1.5rem;
     --h3-fs: 1.25rem;
@@ -33,10 +33,15 @@ body {
 
 a {
     text-decoration: none;
+    outline: none;
 }
 
 button, a:hover {
     cursor: pointer;
+}
+
+li {
+    list-style: none;
 }
 
 .container {
@@ -45,16 +50,83 @@ button, a:hover {
     z-index: var(--z-index);
 }
 
+.regular-btn {
+    font-size: var(--normal-fs);
+    border-radius: 100px;
+    border: 1px solid var(--secondary-clr);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    word-spacing: 10px;
+    padding: 0.5rem 5rem;
+    transition: background-color 2s;
+}
+
+.accent-btn {
+    font-size: var(--h2-fs);
+    font-weight: 600;
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--secondary-clr);
+    border-radius: 50%;
+    text-transform: uppercase;
+    transition: background-color 2s;
+    text-align: center;
+    word-wrap: break-word;
+    word-spacing: 10px;
+}
+
+.regular-btn:hover, .accent-btn:hover {
+    background-color: #ff6347;
+}
+
 /*===================header=================*/
+header {
+    width: 100%;
+    min-height: 70px;
+    padding: 2rem 0;
+    position: sticky;
+}
 
+nav {
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.nav-logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--secondary-clr);
+    
+}
+
+.nav-item {
+    display: inline-block;
+    margin-left: 2rem;
+}
 
 
 /*===================main=================*/
 /*=======hero=======*/
 
 .hero {
-    
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hero-head {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    width: 100%;
+}
+
+.hero-head > h1, .hero-panel > h1 {
+    line-height: 0.9;
+    font-size: var(--hero-fs);
 }
 
 .hero-mp4 {
