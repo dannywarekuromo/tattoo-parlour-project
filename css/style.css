@@ -10,8 +10,8 @@
     --italized-ff: 'EB Garamond', serif; 
     /*font size*/
     --hero-fs: 10rem;
-    --h1-fs: 2.25rem;
-    --h2-fs: 1.5rem;
+    --h1-fs: 4.25rem;
+    --h2-fs: 2.5rem;
     --h3-fs: 1.25rem;
     --normal-fs: 1rem;
     --small-fs: .875rem;
@@ -45,9 +45,15 @@ li {
 }
 
 .container {
-    min-width: 100%;
+    width: 100%;
     margin: 0 auto;
     z-index: var(--z-index);
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
 }
 
 .regular-btn {
@@ -83,13 +89,14 @@ li {
 /*===================header=================*/
 header {
     width: 100%;
+    margin: 0 auto;
     min-height: 70px;
     padding: 2rem 0;
     position: sticky;
 }
 
 nav {
-    max-width: 85%;
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -112,10 +119,9 @@ nav {
 /*===================main=================*/
 /*=======hero=======*/
 
-.hero {
-    width: 80%;
-    margin: 0 auto;
-}
+/*.hero {
+
+}*/
 
 .hero-head {
     display: flex;
@@ -139,12 +145,65 @@ nav {
 
 /*=======gallery-cta=======*/
 .gallery-cta {
-    position: relative;
+    width: 100%;
+    margin: 2rem 0;
     background-color: var(--secondary-clr);
     padding: 10px 20px;
     overflow: hidden;
 }
 
 .gallery-cta > a {
-    position: absolut;
+    display: block;
+}
+
+/*=======testimonials=======*/
+.testimonial > h3 {
+    font-size: var(--h1-fs);
+}
+
+.testimony {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 30%);
+    grid-gap: 1.25rem;
+    padding: 2rem 0;
+}
+
+.testimonial-panel {
+    border: 1px solid var(--secondary-clr);
+    border-radius: 20px;
+    padding: 2rem 2rem;
+}
+
+.testimonial-panel > h5 {
+    text-transform: uppercase;
+}
+
+.testimonial-panel > p {
+    margin-top: 1rem; 
+}
+
+/*=======about=======*/
+.about {
+    width: 100%;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-header > h1 {
+    font-size: var(--hero-fs);
+    line-height: 0.8;
+}
+
+.about-text {
+    max-width: 270px;
+    margin: 2rem 0rem 2rem 45rem;
+}
+
+.about-text-panel {
+    padding: 1rem;
 }
