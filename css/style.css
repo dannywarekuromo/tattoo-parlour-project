@@ -11,7 +11,7 @@ html {
 /*================custom properties==================*/
 :root {
     /*colors*/
-    --accent-clr: rgb(240, 170, 41);
+    --accent-clr: #ff6347;
     --dominant-clr: rgb(241, 241, 241);
     --secondary-clr: rgb(0, 0, 0);
 
@@ -56,7 +56,7 @@ a {
     color: var(--secondary-clr);
 }
 
-a:hover {
+button:hover, a:hover {
     cursor: pointer;
 }
 
@@ -71,7 +71,7 @@ li {
     z-index: var(--z-index);
 }
 
-.hero, .testimonial, .about{
+.hero, .testimonial, .about, .featured-works {
     padding: var(--ws-6)
     var(--ws-adjustable);
 }
@@ -79,7 +79,23 @@ li {
 .section-head {
     font-size: var(--h1-fs);
     font-weight: 600;
+    line-height: 0.8;
 }
+
+.btn {
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--secondary-clr);
+    background: var(--dominant-clr);
+}
+
+/*===================global=================*/
+img {
+    width: 100%;
+    height: auto;
+}
+
 
 /*===================header=================*/
 header {
@@ -185,4 +201,53 @@ li {
 
 .about-cta {
     margin-top: var(--ws-4);
+    height: 30px;
+}
+
+/*featured works*/
+.fw-panel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 400px 750px;
+}
+
+.fw-img {
+    background-image: url("../img/pexels-cottonbro-4123906.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-right: var(--ws-6);
+    border-radius: 20px;
+}
+
+.fw-gallery {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: var(--ws-4);
+}
+
+.a-img {
+    background-image: url("../img/pexels-max-vakhtbovych-7393987.jpg");
+}
+
+.gallery-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.b-img {
+    background-image: url("../img/pexels-lucas-alves-3611570.jpg");
+}
+
+.fw-gallery-cta {
+    position: relative;
+    right: 0;
+    top: 320px;
+    height: 30px;
 }
