@@ -82,8 +82,22 @@ li {
     line-height: 0.8;
 }
 
-.btn {
+.btn{
     border-radius: 50px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: var(--secondary-clr);
+    color: var(--dominant-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  
+    
+}
+
+.btn:after {
+    content: attr(data-text);
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: inset 0 0 0 1px var(--secondary-clr);
@@ -91,29 +105,12 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    
-}
-
-.btn:hover:after {
-    animation: mask-play 1s forwards;
-}
-
-.btn:after {
-    content: attr(data-text);
     position: absolute;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-weight: 600;
-    background: var(--secondary-clr);
-    color: var(--dominant-clr);
-    width: 101%;
-    height: 101%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    color: var(--secondary-clr);
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
     -webkit-mask-image: url(../img/ink-blot.png);
     mask-image: url(../img/ink-blot.png);
     -webkit-mask-position: center center;
@@ -122,6 +119,11 @@ li {
     mask-size: 1200% 1200%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    animation: mask-play-reverse 1.5s steps(35) forwards; 
+}
+
+.btn:hover:after {
+    animation: mask-play 0.9s steps(35) forwards;
 }
 
 @keyframes mask-play {
@@ -132,6 +134,17 @@ li {
     to {
         -webkit-mask-size: 0% 0%;
         mask-size: 0% 0%;
+    }
+}
+
+@keyframes mask-play-reverse {
+    from {
+       -webkit-mask-size: 0% 0%;
+       mask-size: 0% 0%;
+    }
+    to {
+        -webkit-mask-size: 1200% 1200%;
+        mask-size: 1200% 1200%;
     }
 }
 
@@ -195,9 +208,60 @@ li {
     letter-spacing: 35px;
     text-transform: uppercase;
 }
+
+.hero-head {
+    position: relative;
+}
+
 .hero-cta {
     position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-weight: 600;
+    overflow: hidden;
+    text-transform: uppercase;
+    background: var(--secondary-clr);
+    color: var(--dominant-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.hero-cta:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: inset 0px 0px 0px 1px var(--secondary-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--dominant-clr);
+    color: var(--secondary-clr);
+    -webkit-mask-image: url(../img/ink-blot.png);
+    mask-image: url(../img/ink-blot.png);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-size: 1200% 1200%;
+    mask-size: 1200% 1200%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    animation: mask-play-reverse 4s steps(35) forwards; 
+}
+
+.hero-cta:hover:after {
+    animation: mask-play 0.9s steps(35) forwards;
+}
+
 
 .hero-hashtag {
     text-align: center;
