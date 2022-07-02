@@ -86,8 +86,53 @@ li {
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: 600;
-    border: 1px solid var(--secondary-clr);
+    box-shadow: inset 0 0 0 1px var(--secondary-clr);
     background: var(--dominant-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.btn:hover:after {
+    animation: mask-play 1s forwards;
+}
+
+.btn:after {
+    content: attr(data-text);
+    position: absolute;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: var(--secondary-clr);
+    color: var(--dominant-clr);
+    width: 101%;
+    height: 101%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-mask-image: url(../img/ink-blot.png);
+    mask-image: url(../img/ink-blot.png);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-size: 1200% 1200%;
+    mask-size: 1200% 1200%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+@keyframes mask-play {
+    from {
+       -webkit-mask-size: 1200% 1200%;
+       mask-size: 1200% 1200%;
+    }
+    to {
+        -webkit-mask-size: 0% 0%;
+        mask-size: 0% 0%;
+    }
 }
 
 /*===================global=================*/
