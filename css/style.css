@@ -190,7 +190,7 @@ li {
 /*=======hero=======*/
 .hero-mp4 {
     position: relative;
-    top: -3.5rem;
+    top: 0;
     right: 0;
     width: 100%;
     min-height: 100%;
@@ -290,6 +290,7 @@ li {
     top: 0%;
     left: 110%;
     animation: sliding-text 10s linear infinite;
+    transform: skewX(30deg);
 }
 
 @keyframes sliding-text {
@@ -297,7 +298,7 @@ li {
         left: 110%;
     }
     100% {
-        left: -200%
+        left: -300%
     }
 }
 
