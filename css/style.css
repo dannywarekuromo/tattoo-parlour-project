@@ -270,32 +270,34 @@ li {
 /*gallery*/
 .gallery-cta {
     position: relative;
-    min-width: 100%;
+    max-width: 100%;
     height: 30vh;
     overflow: hidden;
     background: var(--secondary-clr);
-    display: flex;
+    padding: var(--ws-3) 0px;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 
-.gallery-link-text {
-    position: absolute;
-    font-size: var(--hero-fs);
-    -webkit-text-stroke: 2px var(--accent-clr);
-    color: var(--secondary-clr);
+.gallery-panel {
     display: inline-block;
-    min-width: 100%;
-    height: 100%;
+    font-size: var(--hero-fs);
+    color: var(--secondary-clr);
+    position: absolute;
+    -webkit-text-stroke: 2px var(--accent-clr);
+    min-width: 1000%;
+    top: 0%;
+    left: 110%;
     animation: sliding-text 10s linear infinite;
 }
 
 @keyframes sliding-text {
     0% {
-        transform: translate(0, 0);
+        left: 110%;
     }
     100% {
-        transform: translate(-100%, 0);
+        left: -200%
     }
 }
 
