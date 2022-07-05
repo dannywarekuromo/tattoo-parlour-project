@@ -267,6 +267,38 @@ li {
     text-align: center;
 }
 
+/*gallery*/
+.gallery-cta {
+    position: relative;
+    min-width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    background: var(--secondary-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-link-text {
+    position: absolute;
+    font-size: var(--hero-fs);
+    -webkit-text-stroke: 2px var(--accent-clr);
+    color: var(--secondary-clr);
+    display: inline-block;
+    min-width: 100%;
+    height: 100%;
+    animation: sliding-text 10s linear infinite;
+}
+
+@keyframes sliding-text {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
 /*testimonial*/
 .testimony {
     margin-top: var(--ws-2);
