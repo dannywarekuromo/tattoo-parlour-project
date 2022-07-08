@@ -159,6 +159,7 @@ img {
 header {
     max-width: 100%;
     padding: var(--ws-3) var(--ws-adjustable);
+    position: relative;
 }
 
 nav {
@@ -186,6 +187,28 @@ li {
     color: var(--accent-clr);
 }
 
+/*hamburger style*/
+.hamburger {
+    position: absolute;
+    display: none;
+}
+
+.ham-layer {
+    display: block;
+    background-color: var(--secondary-clr);
+    border-radius: 15px;
+}
+
+.ham-layer-1 {
+    width: 2.5rem;
+    height: .3rem;
+    margin-bottom: .2rem;
+}
+
+.ham-layet-2 {
+    width: 2rem;
+    height: .3rem;
+}
 /*===================main=================*/
 /*=======hero=======*/
 .hero-mp4 {
