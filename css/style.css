@@ -71,7 +71,7 @@ li {
     z-index: var(--z-index);
 }
 
-.hero, .testimonial, .about, .featured-works {
+.hero, .about, .featured-works {
     padding: var(--ws-6)
     var(--ws-adjustable);
 }
@@ -211,6 +211,9 @@ li {
 
 /*===================main=================*/
 /*=======hero=======*/
+.hero {
+    padding-top: var(--ws-adjustable);
+}
 .hero-mp4 {
     position: relative;
     top: 0;
@@ -325,23 +328,6 @@ li {
     }
 }
 
-/*testimonial*/
-.testimony {
-    margin-top: var(--ws-2);
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-gap: var(--ws-3);
-}
-
-.testimonial-panel {
-    border: 1px solid var(--secondary-clr);
-    border-radius: 20px;
-    padding: var(--ws-4);
-}
-
-.testimonial-panel > h5 {
-    margin-bottom: var(--ws-2);
-}
 
 /*about*/
 .about-heading {
